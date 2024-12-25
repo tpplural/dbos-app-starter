@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator list</title>
+</head>
+<body>
+    <h1>Wprowadź (skopiuj z excela) imiona i nazwiska uczestników zajęć</h1>
+	<p>Po naciśnięciu generuj, dostaniesz pdfa z powrotem.</p>
+    <form action="/submit" method="post">
+        <label for="title">Tytuł zajęć (opcjonalnie):</label><br>
+        <input type="text" id="title" name="title" ><br><br>
+
+        <label for="prowadzacy">Prowadzący: (opcjonalnie):</label><br>
+        <input type="text" id="prowadzacy" name="prowadzacy" ><br><br>
+
+        <label for="data">Data zajęć: (opcjonalnie):</label><br>
+        <input type="text" id="data" name="data" ><br><br>
+
+        <label for="content">Lista nazwisk:</label><br>
+        <textarea name="multiline_input" rows="10" cols="50" placeholder="tu wpisz nazwiska..."></textarea>
+        <br>
+
+        <label for="dropdown_choice">Typ listy:</label><br>
+        <select id="dropdown_choice" name="dropdown_choice">
+            <option value="list1">dorosli wielorazowa</option>
+            <option value="list2">dorosli jednorazowa (planowana)</option>
+            <option value="list3">dzieci (planowana)</option>
+        </select><br><br>
+        <button type="submit">Generuj</button>
+    </form>
+</body>
+</html>
